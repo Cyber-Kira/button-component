@@ -1,0 +1,17 @@
+.text {
+  font-family: Ubuntu Mono;
+  letter-spacing: 0em;
+  @include font($size: 12px, $weight: 400);
+
+  &_highlighted-red {
+    color: #f7542e;
+  }
+}
+
+.header {
+  &__text {
+    font-family: Poppins;
+    letter-spacing: 0em;
+    @include font($size: 13px, $weight: 600, $height: 20px);
+  }
+}
