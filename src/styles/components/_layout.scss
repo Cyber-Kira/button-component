@@ -1,0 +1,49 @@
+.row {
+  display: flex;
+}
+
+.col {
+  width: 100%;
+
+  &-sm-12 {
+    flex: 0 0 100%;
+  }
+
+  @include media-laptop {
+    &-md-3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+
+    &-md-9 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 0 12px;
+
+  @include media-laptop {
+    padding: 0 32px;
+  }
+
+  @include media-extra-large {
+    padding: 0;
+  }
+
+  &-xl {
+    @include media-extra-large {
+      margin: 0 auto;
+      max-width: 1440px;
+      padding: 0;
+    }
+  }
+}
