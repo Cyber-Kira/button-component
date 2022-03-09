@@ -5,6 +5,12 @@
   line-height: $height;
 }
 
+@mixin media-extra-large {
+  @media (min-width: $extra-large-width) {
+    @content;
+  }
+}
+
 @mixin media-laptop {
   @media (min-width: $content-width) {
     @content;
