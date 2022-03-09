@@ -2,8 +2,8 @@
 
 // 1. Configuration and helpers
 @import
-  'abstracts/mixins',
   'abstracts/constants',
+  'abstracts/mixins',
   'abstracts/placeholders';
 
 // 3. Base stuff
@@ -18,7 +18,10 @@
   
 // 5. Components
 @import
-  'components/buttons';
+  'components/buttons',
+  'components/affix',
+  'components/header',
+  'components/layout';
 
 // 6. Themes
 @import
