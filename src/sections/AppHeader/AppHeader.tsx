@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import GitHubDark from "./assets/GitHub-Mark-32px.png";
 
 export const AppHeader = () => {
   const [menuState, setMenuState] = useState(false);
@@ -26,11 +27,42 @@ export const AppHeader = () => {
         className={`wrapper header__navigation col col-md-9 ${currentMenuState}`}
       >
         {/* It will become a react router link and warning will be fixed */}
-        <a href="#">Docs</a>
-        <input type="checkbox" name="theme-changer" id="theme-changer" />
-        <a href="#">
-          <span className="visually-hidden">Github</span>
-        </a>
+        <ul className="navigation-menu">
+          <li>
+            <a href="#">Docs</a>
+          </li>
+          <li>
+            <a href="#">API</a>
+          </li>
+          <li>
+            <a href="#">Playground</a>
+          </li>
+          <li>
+            <a href="#">Ecosystem</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Sponsor</a>
+          </li>
+        </ul>
+        <div className="theme-changer">
+          <label>
+            <span className="theme-changer__text">Appearance</span>
+            <button className="theme-changer__button" type="button"></button>
+          </label>
+        </div>
+        <div className="social">
+          <a
+            href="https://github.com/Cyber-Kira"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <img src={GitHubDark} alt="Github Logo" />
+            <span className="visually-hidden">Github</span>
+          </a>
+        </div>
       </div>
     </header>
   );
