@@ -1,0 +1,28 @@
+.social {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  a {
+    transition: opacity 0.2s ease-in;
+    padding: 15px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  img {
+    $imgSize: 22px;
+    width: $imgSize;
+    height: $imgSize;
+  }
+
+  @include media-laptop {
+    width: fit-content;
+    gap: 5px;
+    a {
+      padding: 0;
+    }
+  }
+}
