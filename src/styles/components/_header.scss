@@ -14,12 +14,12 @@
     align-items: center;
     background-color: #fafbfd;
     min-height: 100%;
-    transform: translateY(-100%);
     opacity: 0;
     z-index: -1;
     gap: 15px;
 
-    transition: transform 0.25s ease, opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    -webkit-font-smoothing: antialiased;
 
     @include media-laptop {
       flex-direction: row;
@@ -39,22 +39,23 @@
     top: $headerHight;
     left: 0;
     opacity: 1;
-    transform: translateY(0);
     padding: 24px 40px 0;
   }
 
   &__logo {
     justify-content: center;
     background-color: #fafbfd;
+
+    @include media-laptop {
+      justify-content: flex-start;
+    }
   }
 
-  #menu-state-changer {
-    $menuWidth: 24px;
+  .hamburger-react {
+    $menuWidth: 48px;
 
-    position: absolute;
+    position: absolute !important;
     display: inline-block;
-    width: $menuWidth;
-    height: $menuWidth;
     right: 15px;
     top: calc(($headerHight / 2) - ($menuWidth / 2));
 
