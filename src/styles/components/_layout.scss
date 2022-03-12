@@ -134,22 +134,5 @@
 
 .wrapper {
   margin: 0 auto;
-  max-width: 1440px;
   padding: 0 12px;
-
-  @include media-laptop {
-    padding: 0 32px;
-  }
-
-  @include media-extra-large {
-    padding: 0;
-  }
-
-  &-xl {
-    @include media-extra-large {
-      margin: 0 auto;
-      max-width: 1440px;
-      padding: 0;
-    }
-  }
 }

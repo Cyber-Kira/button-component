@@ -1,5 +1,5 @@
 .text {
-  font-family: Ubuntu Mono;
+  font-family: "Ubuntu Mono";
   letter-spacing: 0em;
   @include font($size: 12px, $weight: 400);
 
@@ -13,5 +13,14 @@
     font-family: Poppins;
     letter-spacing: 0em;
     @include font($size: 13px, $weight: 600, $height: 20px);
+  }
+}
+
+.menu {
+  font-family: "Noto Sans JP";
+  @include font(14px, 20px, 500);
+
+  &__header {
+    font-weight: 600;
   }
 }
