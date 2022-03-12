@@ -51,6 +51,12 @@
     }
   }
 
+  &__text {
+    @include media-laptop {
+      margin-left: 35px;
+    }
+  }
+
   .hamburger-react {
     $menuWidth: 48px;
 
