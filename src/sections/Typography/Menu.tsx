@@ -20,13 +20,43 @@ const Header = ({
   }
 };
 
-const Text = ({ code, bold }: { code: string; bold: string }) => {
+const Text = ({
+  code,
+  bold,
+  children,
+}: {
+  code?: boolean;
+  bold?: boolean;
+  children: React.ReactNode;
+}) => {
   return (
     <span
-      className={`typography__paragraph ${
-        code ? "typography__paragraph-code" : ""
-      } ${bold ? "typography__paragraph-bold" : ""}`}
-    ></span>
+      className={`typography__text 
+      ${code ? "typography__text-code" : ""} 
+      ${bold ? "typography__text-bold" : ""}`}
+    >
+      {children}
+    </span>
+  );
+};
+
+const Paragraph = ({
+  code,
+  bold,
+  children,
+}: {
+  code?: boolean;
+  bold?: boolean;
+  children: React.ReactNode;
+}) => {
+  return (
+    <span
+      className={`typography__paragraph 
+      ${code ? "typography__paragraph-code" : ""} 
+      ${bold ? "typography__paragraph-bold" : ""}`}
+    >
+      {children}
+    </span>
   );
 };
 
@@ -36,3 +66,4 @@ export const Typography = ({ children }: { children: React.ReactNode }) => {
 
 Typography.Header = Header;
 Typography.Text = Text;
+Typography.Paragraph = Paragraph;
