@@ -20,8 +20,19 @@ const Header = ({
   }
 };
 
+const Text = ({ code, bold }: { code: string; bold: string }) => {
+  return (
+    <span
+      className={`typography__paragraph ${
+        code ? "typography__paragraph-code" : ""
+      } ${bold ? "typography__paragraph-bold" : ""}`}
+    ></span>
+  );
+};
+
 export const Typography = ({ children }: { children: React.ReactNode }) => {
   return <div>{children}</div>;
 };
 
 Typography.Header = Header;
+Typography.Text = Text;
