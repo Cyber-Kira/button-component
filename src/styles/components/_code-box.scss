@@ -1,0 +1,37 @@
+.code-box {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 16px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 2px;
+  transition: all 0.2s;
+  &__item {
+    position: relative;
+    padding: 42px 24px 50px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  &__toggle {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__title {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    transform: translateY(-50%);
+    display: inline-block;
+    background-color: white;
+    padding: 6px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+  }
+}
