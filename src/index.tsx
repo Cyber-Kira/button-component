@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { Affix } from "./lib/components";
 import { ThemeContext, Themes, themes } from "./lib/components/Theme";
 import { AppHeader } from "./sections/AppHeader";
+import { CodeBox } from "./sections/CodeBox";
 import { Menu } from "./sections/Menu";
 import { ItemGroup } from "./sections/Menu/components/ItemGroup";
 import { DataItem } from "./sections/Menu/types";
@@ -45,6 +46,8 @@ const App = () => {
     },
   ];
 
+  const { Item, Toggle } = CodeBox;
+
   return (
     <ThemeContext.Provider value={theme}>
       <Affix offsetTop="0">
@@ -59,7 +62,17 @@ const App = () => {
         </div>
         <div className="col menu-col d-none-laptop"></div>
         <div className="content-wrapper col col-md-6 col-sm-12">
-          <Typography.Header level={1}>Hello</Typography.Header>
+          {/* <Header level={1}>Button</Header>
+          <Paragraph>To trigger an operation.</Paragraph>
+          <Header level={2}>Examples</Header> */}
+          <CodeBox>
+            <CodeBox.Item>Hello</CodeBox.Item>
+            <CodeBox.Item title="Type">Hello</CodeBox.Item>
+            <CodeBox.Item buttons>
+              <CodeBox.Toggle />
+            </CodeBox.Item>
+            <CodeBox.Item>Hello</CodeBox.Item>
+          </CodeBox>
         </div>
       </div>
     </ThemeContext.Provider>
