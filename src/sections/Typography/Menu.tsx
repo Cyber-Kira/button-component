@@ -7,8 +7,8 @@ const Header = ({
   level: number;
   children: React.ReactNode;
 }) => {
-  const h1 = <h1 className="typography__title--h1">{children}</h1>;
-  const h2 = <h2 className="typography__title--h2">{children}</h2>;
+  const h1 = <h1 className="typography__title_h1">{children}</h1>;
+  const h2 = <h2 className="typography__title_h2">{children}</h2>;
   switch (level) {
     case 1:
       return h1;
@@ -32,8 +32,8 @@ const Text = ({
   return (
     <span
       className={`typography__text 
-      ${code ? "typography__text-code" : ""} 
-      ${bold ? "typography__text-bold" : ""}`}
+      ${code ? "typography__text_code" : ""} 
+      ${bold ? "typography__text_bold" : ""}`}
     >
       {children}
     </span>
@@ -50,13 +50,13 @@ const Paragraph = ({
   children: React.ReactNode;
 }) => {
   return (
-    <span
+    <p
       className={`typography__paragraph 
-      ${code ? "typography__paragraph-code" : ""} 
-      ${bold ? "typography__paragraph-bold" : ""}`}
+      ${code ? "typography__paragraph_code" : ""} 
+      ${bold ? "typography__paragraph_bold" : ""}`}
     >
       {children}
-    </span>
+    </p>
   );
 };
 

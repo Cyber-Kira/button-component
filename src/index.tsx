@@ -46,7 +46,23 @@ const App = () => {
     },
   ];
 
+  const code = `
+  import { Button } from 'antd';
+
+  ReactDOM.render(
+    <>
+      <Button type="primary">Primary Button</Button>
+      <Button>Default Button</Button>
+      <Button type="dashed">Dashed Button</Button>
+      <br />
+      <Button type="text">Text Button</Button>
+      <Button type="link">Link Button</Button>
+    </>,
+    mountNode,
+  );`;
+
   const { Item, Toggle } = CodeBox;
+  const { Header, Paragraph, Text } = Typography;
 
   return (
     <ThemeContext.Provider value={theme}>
@@ -62,16 +78,21 @@ const App = () => {
         </div>
         <div className="col menu-col d-none-laptop"></div>
         <div className="content-wrapper col col-md-6 col-sm-12">
-          {/* <Header level={1}>Button</Header>
+          <Header level={1}>Button</Header>
           <Paragraph>To trigger an operation.</Paragraph>
-          <Header level={2}>Examples</Header> */}
+          <Header level={2}>Examples</Header>
           <CodeBox>
-            <CodeBox.Item>Hello</CodeBox.Item>
-            <CodeBox.Item title="Type">Hello</CodeBox.Item>
-            <CodeBox.Item buttons>
-              <CodeBox.Toggle />
-            </CodeBox.Item>
-            <CodeBox.Item>Hello</CodeBox.Item>
+            <Item>Hello</Item>
+            <Item title="Type">
+              There are <Text code>primary</Text> button,{" "}
+              <Text code>default</Text> button, text button and{" "}
+              <Text code>link</Text>
+              button.
+            </Item>
+            <Item buttons>
+              <Toggle />
+            </Item>
+            <Item code>{code}</Item>
           </CodeBox>
         </div>
       </div>

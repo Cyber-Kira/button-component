@@ -1,11 +1,11 @@
 import React, { createContext, useContext, useState } from "react";
 
-interface Inter {
+interface ContextInterface {
   open: boolean;
   toggle: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const HightlightContext = createContext<Inter>({
+const HightlightContext = createContext<ContextInterface>({
   open: false,
   toggle: () => null,
 });
@@ -14,6 +14,7 @@ interface Props {
   children: React.ReactNode;
   title?: string;
   buttons?: boolean;
+  code?: boolean;
 }
 
 export const CodeBox = ({ children }: Props) => {
@@ -28,15 +29,33 @@ export const CodeBox = ({ children }: Props) => {
 
 const Toggle = () => {
   const { open, toggle } = useContext(HightlightContext);
-  console.log(open);
+
+  const buttonText = open ? "Hide Code" : "Show Code";
+
   return (
     <button className="code-box__button-expand" onClick={() => toggle(!open)}>
-      Toggle
+      {buttonText}
     </button>
   );
 };
 
-const Item = ({ children, title, buttons }: Props) => {
+const Item = ({ children, title, buttons, code }: Props) => {
+  const { open } = useContext(HightlightContext);
+
+  if (!open && code) {
+    return null;
+  }
+
+  if (code) {
+    return (
+      <section className={`code-box__item ${code ? "code-box__code" : ""}`}>
+        <pre>
+          <code className="language-html">{children}</code>
+        </pre>
+      </section>
+    );
+  }
+
   const titleElement = title ? (
     <div className="code-box__title">{title}</div>
   ) : (
