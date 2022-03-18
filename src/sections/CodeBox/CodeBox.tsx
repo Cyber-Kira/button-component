@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState } from "react";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
 interface ContextInterface {
   open: boolean;
@@ -42,15 +43,19 @@ const Toggle = () => {
 const Item = ({ children, title, buttons, code }: Props) => {
   const { open } = useContext(HightlightContext);
 
-  if (!open && code) {
-    return null;
-  }
-
-  if (code) {
+  if (open && code) {
     return (
-      <section className={`code-box__item ${code ? "code-box__code" : ""}`}>
+      <section
+        className={`code-box__item ${
+          code && open ? "code-box__code" : "code-box__code_hidden"
+        }`}
+      >
         <pre>
-          <code className="language-html">{children}</code>
+          <code className="language-html">
+            <SyntaxHighlighter language="javascript">
+              {children}
+            </SyntaxHighlighter>
+          </code>
         </pre>
       </section>
     );

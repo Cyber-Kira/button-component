@@ -77,23 +77,77 @@ const App = () => {
           </Menu>
         </div>
         <div className="col menu-col d-none-laptop"></div>
-        <div className="content-wrapper col col-md-6 col-sm-12">
+        <div className="content-wrapper col col-md-10 col-sm-12">
           <Header level={1}>Button</Header>
           <Paragraph>To trigger an operation.</Paragraph>
           <Header level={2}>Examples</Header>
-          <CodeBox>
-            <Item>Hello</Item>
-            <Item title="Type">
-              There are <Text code>primary</Text> button,{" "}
-              <Text code>default</Text> button, text button and{" "}
-              <Text code>link</Text>
-              button.
-            </Item>
-            <Item buttons>
-              <Toggle />
-            </Item>
-            <Item code>{code}</Item>
-          </CodeBox>
+          <div className="content">
+            <CodeBox>
+              <Item>Hello</Item>
+              <Item title="Type">
+                There are <Text code>primary</Text> button,{" "}
+                <Text code>default</Text> button, text button and{" "}
+                <Text code>link</Text>
+                button.
+              </Item>
+              <Item buttons>
+                <Toggle />
+              </Item>
+              <Item code>{code}</Item>
+            </CodeBox>
+            <CodeBox>
+              <Item>Hello</Item>
+              <Item title="Code">
+                There are <Text code>primary</Text> button,{" "}
+                <Text code>default</Text> button, text button and{" "}
+                <Text code>link</Text>
+                button.
+              </Item>
+              <Item buttons>
+                <Toggle />
+              </Item>
+              <Item code>{code}</Item>
+            </CodeBox>
+            <CodeBox>
+              <Item>Hello</Item>
+              <Item title="Code">
+                There are <Text code>primary</Text> button,{" "}
+                <Text code>default</Text> button, text button and{" "}
+                <Text code>link</Text>
+                button.
+              </Item>
+              <Item buttons>
+                <Toggle />
+              </Item>
+              <Item code>{code}</Item>
+            </CodeBox>
+            <CodeBox>
+              <Item>Hello</Item>
+              <Item title="Code">
+                There are <Text code>primary</Text> button,{" "}
+                <Text code>default</Text> button, text button and{" "}
+                <Text code>link</Text>
+                button.
+              </Item>
+              <Item buttons>
+                <Toggle />
+              </Item>
+              <Item code>{code}</Item>
+            </CodeBox>
+            <CodeBox>
+              <Item>Hello</Item>
+              <Item title="Code">
+                There are <Text code>primary</Text> button,{" "}
+                <Text code>default</Text> button, text button and{" "}
+                <Text code>link</Text>
+                button.
+              </Item>
+              <Item buttons>
+                <Toggle />
+              </Item>
+              <Item code>{code}</Item>
+            </CodeBox>
+          </div>
         </div>
       </div>
     </ThemeContext.Provider>
