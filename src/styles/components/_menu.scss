@@ -64,7 +64,8 @@
     transition: color 0.15s;
 
     &:hover {
-      color: hsl(0, 0%, 42%);
+      outline: none;
+      color: #090f31;
     }
   }
 }

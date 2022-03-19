@@ -1,11 +1,14 @@
 .content {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px;
   flex-wrap: wrap;
-  max-width: 100%;
-  > * {
-    flex: 0 0 48%;
+  @include media-laptop {
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 100%;
+    > * {
+      flex: 0 0 48%;
+    }
   }
 }
