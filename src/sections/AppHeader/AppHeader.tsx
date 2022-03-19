@@ -5,6 +5,7 @@ import { Rotate as Hamburger } from "hamburger-react";
 import { ThemeContext } from "../../lib/components/Theme";
 import LightIcon from "./assets/brightness.png";
 import DarkIcon from "./assets/moon.png";
+import { Link } from "react-router-dom";
 
 export const AppHeader = ({ changeTheme }: { changeTheme: () => void }) => {
   const [isOpen, setOpen] = useState(false);
@@ -22,32 +23,31 @@ export const AppHeader = ({ changeTheme }: { changeTheme: () => void }) => {
         color={"hsla(0, 0%, 10%, 1)"}
       />
       <div className="wrapper header__logo col col-sm-12 col-md-3">
-        <p className="header__text">
+        <Link to={"/"} className="header__text">
           <span className="text_highlighted-red">Dev</span>challenges.io
-        </p>
+        </Link>
       </div>
       <div
         className={`wrapper header__navigation col col-md-9 ${currentMenuState}`}
       >
-        {/* It will become a react router link and warning will be fixed */}
         <ul className="navigation-menu">
           <li>
-            <a href="#">Docs</a>
+            <Link to={"#"}>Docs</Link>
           </li>
           <li>
-            <a href="#">API</a>
+            <Link to={"#"}>API</Link>
           </li>
           <li>
-            <a href="#">Playground</a>
+            <Link to={"#"}>Playground</Link>
           </li>
           <li>
-            <a href="#">Ecosystem</a>
+            <Link to={"#"}>Ecosystem</Link>
           </li>
           <li>
-            <a href="#">About</a>
+            <Link to={"#"}>About</Link>
           </li>
           <li>
-            <a href="#">Sponsor</a>
+            <Link to={"#"}>Sponsor</Link>
           </li>
         </ul>
         <div className="theme-changer">
