@@ -1,6 +1,6 @@
 import React from "react";
 import { DataItem } from "../../types";
-import { ListItem } from "../ListItem.tsx";
+import { ListItem } from "../ListItem";
 
 export const ItemGroup = ({
   items,

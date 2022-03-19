@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { DataItem } from "../../types";
 
 export const ListItem = ({ title, link }: DataItem) => {
   return (
     <li className="menu__item">
-      <a className="menu__link" href={link}>
+      <Link to={link} className="menu__link">
         {title}
-      </a>
+      </Link>
     </li>
   );
 };
