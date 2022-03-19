@@ -43,15 +43,17 @@ const Toggle = () => {
 const Item = ({ children, title, buttons, code }: Props) => {
   const { open } = useContext(HightlightContext);
 
+  if (!open && code) {
+    return null;
+  }
+
   if (open && code) {
     return (
       <section
-        className={`code-box__item ${
-          code && open ? "code-box__code" : "code-box__code_hidden"
-        }`}
+        className={`code-box__item ${code && open ? "code-box__code" : ""}`}
       >
         <pre>
-          <code className="language-html">
+          <code>
             <SyntaxHighlighter language="javascript">
               {children}
             </SyntaxHighlighter>
