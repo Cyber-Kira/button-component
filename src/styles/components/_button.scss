@@ -15,7 +15,7 @@
   border: 0;
   padding: 8px 16px;
 
-  transition: all 0.2s;
+  transition: all 0.25s;
 
   &:hover,
   &:focus {
@@ -27,15 +27,81 @@
   }
 
   &_outline {
+    padding: 8px 20px;
+    color: #3e5bfe;
+    border: 1px solid #3e5bfe;
+    background-color: transparent;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+      background-color: hsla(224, 100%, 58%, 0.1);
+    }
   }
   &_text {
+    padding: 8px 20px;
+    color: #3e5bfe;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+      background-color: rgba(41, 98, 255, 0.1);
+    }
+
+    &.btn_disabled {
+      background-color: transparent;
+      &:hover,
+      &:focus {
+        background-color: transparent;
+      }
+    }
   }
   &_disabled {
+    background: #e0e0e0;
+    color: #9e9e9e;
+    user-select: none;
+    cursor: not-allowed;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+      background-color: #e0e0e0;
+    }
   }
   &_primary-color {
+    background-color: #2962ff;
+    color: #ffffff;
+    &:hover,
+    &:focus {
+      background-color: #0039cb;
+    }
   }
   &_secondary-color {
+    background-color: #455a64;
+    color: #ffffff;
+    &:hover,
+    &:focus {
+      background-color: #1c313a;
+    }
   }
-  &_darnger-color {
+  &_danger-color {
+    background-color: #d32f2f;
+    color: #ffffff;
+    &:hover,
+    &:focus {
+      background-color: #9a0007;
+    }
+  }
+
+  &_sm {
+    padding: 6px 12px;
+  }
+  &_md {
+    padding: 8px 16px;
+  }
+  &_lg {
+    padding: 11px 22px;
   }
 }
