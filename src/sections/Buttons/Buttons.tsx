@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "../Button";
 import { CodeBox } from "../CodeBox";
 import { Typography } from "../Typography";
 import { mainButtonCodeSample } from "./data";
@@ -14,7 +15,9 @@ export const Buttons = () => {
       <Header level={2}>Examples</Header>
       <div className="content">
         <CodeBox>
-          <Item>Hello</Item>
+          <Item>
+            <Button disableShadow />
+          </Item>
           <Item title="Type">
             There are <Text code>primary</Text> button,{" "}
             <Text code>default</Text> button, text button and{" "}
