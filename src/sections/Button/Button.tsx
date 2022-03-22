@@ -1,31 +1,5 @@
 import React from "react";
-
-enum variants {
-  outline = "btn_outline",
-  text = "btn_text",
-}
-
-enum colors {
-  default = "btn_default",
-  primary = "btn_primary",
-  secondary = "btn_secondary",
-  danger = "btn_danger",
-}
-
-enum sizes {
-  sm = "btn_sm",
-  md = "btn_md",
-  lg = "btn_lg",
-}
-
-interface Props {
-  text?: string;
-  variant?: variants;
-  color?: colors;
-  size?: sizes;
-  disabled?: boolean;
-  disableShadow?: boolean;
-}
+import { Props } from "./types";
 
 export const Button = ({
   text = "Default",
@@ -35,10 +9,13 @@ export const Button = ({
   disabled,
   disableShadow,
 }: Props) => {
+  const isColored = color && !variant && !disableShadow && !disabled;
+
   const styles = `
   btn
+  ${size ? size : "btn_md"} 
   ${variant ? variant : ""} 
-  ${color ? color : ""} 
+  ${isColored ? color : ""} 
   ${size ? size : ""}
   ${disabled ? "btn_disabled" : ""} 
   ${disableShadow ? "btn_disable-shadow" : ""}`
