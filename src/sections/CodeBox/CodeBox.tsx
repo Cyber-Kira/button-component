@@ -76,5 +76,10 @@ const Item = ({ children, title, buttons, code }: Props) => {
   );
 };
 
+const Items = ({ children }: Props) => {
+  return <section className={`code-box__items`}>{children}</section>;
+};
+
 CodeBox.Item = Item;
 CodeBox.Toggle = Toggle;
+CodeBox.Items = Items;
