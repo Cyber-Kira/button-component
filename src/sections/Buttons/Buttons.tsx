@@ -18,23 +18,32 @@ export const Buttons = () => {
         <CodeBox>
           <Items>
             <Button />
-            <Button variant={variants.outline} color={colors.secondary} />
-            <Button variant={variants.text} />
-            <Button disableShadow />
-            <Button disabled />
-            <Button variant={variants.text} disabled />
-          </Items>
-          <Items>
-            <Button />
-            <Button color={colors.primary} />
-            <Button color={colors.secondary} />
-            <Button color={colors.danger} />
+            <Button variant="outline" />
+            <Button variant="text" />
           </Items>
           <Item title="Type">
             There are <Text code>primary</Text> button,{" "}
-            <Text code>default</Text> button, text button and{" "}
-            <Text code>link</Text>
+            <Text code>outlined</Text> button and <Text code>text</Text>
             button.
+          </Item>
+          <Item buttons>
+            <Toggle />
+          </Item>
+          <Item code>{mainButtonCodeSample}</Item>
+        </CodeBox>
+        <CodeBox>
+          <Items>
+            <Button size="lg" />
+            <Button variant="outline" />
+            <Button disableShadow size="sm" />
+          </Items>
+          <Item title="Type">
+            Dev Components support a default button size as well as a large and
+            small size. If a large or small button is desired, set the{" "}
+            <Text code>size</Text>
+            property to either <Text code>large</Text> or{" "}
+            <Text code>small</Text> respectively. Omit the size property for a
+            button with the default size.
           </Item>
           <Item buttons>
             <Toggle />
