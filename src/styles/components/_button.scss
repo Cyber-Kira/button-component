@@ -70,7 +70,7 @@
       background-color: #e0e0e0;
     }
   }
-  &_primary-color {
+  &_primary {
     background-color: #2962ff;
     color: #ffffff;
     &:hover,
@@ -78,7 +78,7 @@
       background-color: #0039cb;
     }
   }
-  &_secondary-color {
+  &_secondary {
     background-color: #455a64;
     color: #ffffff;
     &:hover,
@@ -86,7 +86,7 @@
       background-color: #1c313a;
     }
   }
-  &_danger-color {
+  &_danger {
     background-color: #d32f2f;
     color: #ffffff;
     &:hover,
