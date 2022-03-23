@@ -13,10 +13,10 @@ export const Button = ({
 
   const styles = `
   btn
-  ${size ? size : "btn_md"} 
-  ${variant ? variant : ""} 
-  ${isColored ? color : ""} 
-  ${size ? size : ""}
+  ${size ? `btn_${size}` : "btn_md"} 
+  ${variant ? `btn_${variant}` : ""} 
+  ${isColored ? `btn_${color}` : ""} 
+  ${size ? `btn_${size}` : ""}
   ${disabled ? "btn_disabled" : ""} 
   ${disableShadow ? "btn_disable-shadow" : ""}`
     .replace(/\s+/g, " ")
