@@ -4,12 +4,12 @@ import { Props } from "./types";
 export const Button = ({
   text = "Default",
   variant,
-  color,
+  color = "default",
   size,
   disabled,
   disableShadow,
 }: Props) => {
-  const isColored = color && !variant && !disableShadow && !disabled;
+  const isColored = color && !variant && !disabled;
 
   const styles = `
   btn
