@@ -1,6 +1,6 @@
 export type variants = "outline" | "text";
 
-export type colors = "defaul" | "primary" | "secondary" | "danger";
+export type colors = "default" | "primary" | "secondary" | "danger";
 
 export type sizes = "sm" | "md" | "lg";
 
