@@ -34,7 +34,7 @@ const Toggle = () => {
   const buttonText = open ? "Hide Code" : "Show Code";
 
   return (
-    <button className="code-box__button-expand" onClick={() => toggle(!open)}>
+    <button className="btn btn_sm btn_outline" onClick={() => toggle(!open)}>
       {buttonText}
     </button>
   );
