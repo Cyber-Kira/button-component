@@ -10,6 +10,7 @@ export const Button = ({
   disableShadow,
   startIcon,
   endIcon,
+  shape,
 }: Props) => {
   const isColored = color && !variant && !disabled;
 
@@ -20,7 +21,8 @@ export const Button = ({
   ${isColored ? `btn_${color}` : ""} 
   ${size ? `btn_${size}` : ""}
   ${disabled ? "btn_disabled" : ""} 
-  ${disableShadow ? "btn_disable-shadow" : ""}`
+  ${disableShadow ? "btn_disable-shadow" : ""}
+  ${shape ? `btn_${shape}` : ""}`
     .replace(/\s+/g, " ")
     .trim();
 
