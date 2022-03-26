@@ -107,9 +107,40 @@ export const Buttons = () => {
         </CodeBox>
         <CodeBox>
           <Items>
-            <Button startIcon={<BedtimeIcon fontSize="small" />} />
-            <Button text="" startIcon={<BedtimeIcon fontSize="small" />} />
-            <Button endIcon={<BedtimeIcon fontSize="small" />} />
+            <Button
+              startIcon={<BedtimeIcon fontSize="small" />}
+              handleClick={() => setTheme("dark")}
+            >
+              Dark mode
+            </Button>
+            <Button
+              endIcon={<LightModeIcon fontSize="small" />}
+              handleClick={() => setTheme("light")}
+            >
+              Light mode
+            </Button>
+            <Button
+              startIcon={<BedtimeIcon fontSize="small" />}
+              tooltip="Dark mode"
+              handleClick={() => setTheme("dark")}
+            />
+            <Button
+              shape="circle"
+              startIcon={<LightModeIcon fontSize="small" />}
+              tooltip="Light mode"
+              handleClick={() => setTheme("light")}
+            />
+          </Items>
+          <Item title="Icon">
+            To put icon set <Text code>startIcon</Text> or{" "}
+            <Text code>endIcon</Text> to icon component.
+          </Item>
+          <Item buttons>
+            <Toggle />
+            <CopyToClipboard textToCopy={buttonsIconCodeSample} />
+          </Item>
+          <Item code>{buttonsIconCodeSample}</Item>
+        </CodeBox>
           </Items>
           <Item title="Shadow">
             To disable box shadow set <Text code>disableShadow</Text> property
