@@ -61,4 +61,8 @@
       width: auto;
     }
   }
+  &__buttons {
+    display: flex;
+    gap: 15px;
+  }
 }

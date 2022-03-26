@@ -11,9 +11,14 @@ import {
   Routes,
   Route,
   Outlet,
+  useOutletContext,
 } from "react-router-dom";
 import "./styles/main.scss";
 import { Buttons } from "./sections/Buttons";
+
+type ContextType = {
+  setTheme: React.Dispatch<React.SetStateAction<Themes>>;
+};
 
 const App = () => {
   const [theme, setTheme] = useState<Themes>(themes.light);
@@ -43,7 +48,7 @@ const App = () => {
     },
     {
       title: "Inputs",
-      link: "#",
+      link: "/inputs",
     },
     {
       title: "Grid",
@@ -64,12 +69,16 @@ const App = () => {
         </div>
         <div className="col menu-col d-none-laptop"></div>
         <div className="content-wrapper col col-md-10 col-sm-12">
-          <Outlet />
+          <Outlet context={{ setTheme }} />
         </div>
       </div>
     </ThemeContext.Provider>
   );
 };
+
+export function useTheme() {
+  return useOutletContext<ContextType>();
+}
 
 ReactDOM.render(
   <React.StrictMode>
@@ -77,7 +86,9 @@ ReactDOM.render(
       <Router>
         <Routes>
           <Route path="/" element={<App />}>
+            <Route path="/" element={<Buttons />} />
             <Route path="/buttons" element={<Buttons />} />
+            <Route path="/inputs" element={<Buttons />} />
           </Route>
         </Routes>
       </Router>
