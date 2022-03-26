@@ -10,6 +10,7 @@ import {
   shadowButtonCodeSample,
   sizeButtonCodeSample,
 } from "./data";
+import BedtimeIcon from "@mui/icons-material/Bedtime";
 
 export const Buttons = () => {
   const { Item, Items, Toggle } = CodeBox;
@@ -92,6 +93,23 @@ export const Buttons = () => {
         <CodeBox>
           <Items>
             <Button color="default" disableShadow />
+            <Button startIcon={<BedtimeIcon fontSize="small" />} />
+            <Button endIcon={<BedtimeIcon fontSize="small" />} />
+          </Items>
+          <Item title="Shadow">
+            To disable box shadow set <Text code>disableShadow</Text> property
+            to <Text code>Button</Text>.
+          </Item>
+          <Item buttons>
+            <Toggle />
+          </Item>
+          <Item code>{shadowButtonCodeSample}</Item>
+        </CodeBox>
+        <CodeBox>
+          <Items>
+            <Button startIcon={<BedtimeIcon fontSize="small" />} />
+            <Button text="" startIcon={<BedtimeIcon fontSize="small" />} />
+            <Button endIcon={<BedtimeIcon fontSize="small" />} />
           </Items>
           <Item title="Shadow">
             To disable box shadow set <Text code>disableShadow</Text> property
