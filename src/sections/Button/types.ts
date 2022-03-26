@@ -1,3 +1,5 @@
+import { ReactElement } from "react";
+
 export type variants = "outline" | "text";
 
 export type colors = "default" | "primary" | "secondary" | "danger";
@@ -11,4 +13,6 @@ export interface Props {
   size?: sizes;
   disabled?: boolean;
   disableShadow?: boolean;
+  startIcon?: ReactElement;
+  endIcon?: ReactElement;
 }
