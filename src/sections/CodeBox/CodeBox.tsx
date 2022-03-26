@@ -1,5 +1,10 @@
 import React, { createContext, useContext, useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import CodeIcon from "@mui/icons-material/Code";
+import CodeOffIcon from "@mui/icons-material/CodeOff";
+import ContentCopyIcon from "@mui/icons-material/ContentCopy";
+import { Button } from "../Button";
+import CheckIcon from "@mui/icons-material/Check";
 
 interface ContextInterface {
   open: boolean;
@@ -120,3 +125,4 @@ const Items = ({ children }: Props) => {
 CodeBox.Item = Item;
 CodeBox.Toggle = Toggle;
 CodeBox.Items = Items;
+CodeBox.CopyToClipboard = CopyToClipboard;
