@@ -1,6 +1,5 @@
 import React from "react";
 import { Button } from "../Button";
-import { colors, sizes, variants } from "../Button/types";
 import { CodeBox } from "../CodeBox";
 import { Typography } from "../Typography";
 import {
