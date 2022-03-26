@@ -1,13 +1,12 @@
 import { ReactElement } from "react";
 
-export type variants = "outline" | "text";
-
-export type colors = "default" | "primary" | "secondary" | "danger";
-
-export type sizes = "sm" | "md" | "lg";
+type variants = "outline" | "text";
+type colors = "default" | "primary" | "secondary" | "danger";
+type sizes = "sm" | "md" | "lg";
+type shapes = "default" | "circle";
 
 export interface Props {
-  text?: string;
+  children?: React.ReactNode;
   variant?: variants;
   color?: colors;
   size?: sizes;
@@ -15,4 +14,7 @@ export interface Props {
   disableShadow?: boolean;
   startIcon?: ReactElement;
   endIcon?: ReactElement;
+  shape?: shapes;
+  tooltip?: string;
+  handleClick?: () => void;
 }
