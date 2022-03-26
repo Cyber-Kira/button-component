@@ -11,8 +11,13 @@ export const Button = ({
   startIcon,
   endIcon,
   shape,
+  tooltip,
 }: Props) => {
   const isColored = color && !variant && !disabled;
+
+  const tooltipElement = tooltip ? (
+    <div className="tooltip">{tooltip}</div>
+  ) : null;
 
   const styles = `
   btn
@@ -27,7 +32,7 @@ export const Button = ({
     .trim();
 
   return (
-    <button className={styles}>
+      {tooltipElement}
       {startIcon}
       {text}
       {endIcon}
