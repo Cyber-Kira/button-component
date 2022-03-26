@@ -35,6 +35,7 @@ export const Buttons = () => {
           </Item>
           <Item buttons>
             <Toggle />
+            <CopyToClipboard textToCopy={mainButtonCodeSample} />
           </Item>
           <Item code>{mainButtonCodeSample}</Item>
         </CodeBox>
@@ -54,6 +55,7 @@ export const Buttons = () => {
           </Item>
           <Item buttons>
             <Toggle />
+            <CopyToClipboard textToCopy={sizeButtonCodeSample} />
           </Item>
           <Item code>{sizeButtonCodeSample}</Item>
         </CodeBox>
@@ -69,6 +71,7 @@ export const Buttons = () => {
           </Item>
           <Item buttons>
             <Toggle />
+            <CopyToClipboard textToCopy={disabledButtonCodeSample} />
           </Item>
           <Item code>{disabledButtonCodeSample}</Item>
         </CodeBox>
@@ -87,6 +90,7 @@ export const Buttons = () => {
           </Item>
           <Item buttons>
             <Toggle />
+            <CopyToClipboard textToCopy={colorButtonCodeSample} />
           </Item>
           <Item code>{colorButtonCodeSample}</Item>
         </CodeBox>
@@ -102,6 +106,7 @@ export const Buttons = () => {
           </Item>
           <Item buttons>
             <Toggle />
+            <CopyToClipboard textToCopy={shadowButtonCodeSample} />
           </Item>
           <Item code>{shadowButtonCodeSample}</Item>
         </CodeBox>
