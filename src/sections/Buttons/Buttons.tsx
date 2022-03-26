@@ -4,6 +4,8 @@ import { colors, sizes, variants } from "../Button/types";
 import { CodeBox } from "../CodeBox";
 import { Typography } from "../Typography";
 import {
+  buttonsIconCodeSample,
+  buttonsTooltipCodeSample,
   colorButtonCodeSample,
   disabledButtonCodeSample,
   mainButtonCodeSample,
@@ -11,10 +13,13 @@ import {
   sizeButtonCodeSample,
 } from "./data";
 import BedtimeIcon from "@mui/icons-material/Bedtime";
+import LightModeIcon from "@mui/icons-material/LightMode";
+import { useTheme } from "../..";
 
 export const Buttons = () => {
-  const { Item, Items, Toggle } = CodeBox;
+  const { Item, Items, Toggle, CopyToClipboard } = CodeBox;
   const { Header, Paragraph, Text } = Typography;
+  const { setTheme } = useTheme();
 
   return (
     <>
@@ -24,9 +29,9 @@ export const Buttons = () => {
       <div className="content">
         <CodeBox>
           <Items>
-            <Button />
-            <Button variant="outline" />
-            <Button variant="text" />
+            <Button>Default</Button>
+            <Button variant="outline">Default</Button>
+            <Button variant="text">Default</Button>
           </Items>
           <Item title="Type">
             There are <Text code>primary</Text> button,{" "}
@@ -41,9 +46,9 @@ export const Buttons = () => {
         </CodeBox>
         <CodeBox>
           <Items>
-            <Button size="lg" />
-            <Button variant="outline" />
-            <Button size="sm" />
+            <Button size="lg">Default</Button>
+            <Button variant="outline">Default</Button>
+            <Button size="sm">Default</Button>
           </Items>
           <Item title="Size">
             Dev Components support a default button size as well as a large and
@@ -61,8 +66,10 @@ export const Buttons = () => {
         </CodeBox>
         <CodeBox>
           <Items>
-            <Button disabled />
-            <Button variant="text" disabled />
+            <Button disabled>Default</Button>
+            <Button variant="text" disabled>
+              Default
+            </Button>
           </Items>
           <Item title="Disabled">
             To mark a button as <Text code>disabled</Text>, add the disabled
@@ -77,10 +84,10 @@ export const Buttons = () => {
         </CodeBox>
         <CodeBox>
           <Items>
-            <Button color="default" />
-            <Button color="primary" />
-            <Button color="secondary" />
-            <Button color="danger" />
+            <Button color="default">Default</Button>
+            <Button color="primary">Default</Button>
+            <Button color="secondary">Default</Button>
+            <Button color="danger">Default</Button>
           </Items>
           <Item title="Color">
             To change color of a <Text code>Button</Text> set{" "}
@@ -96,9 +103,9 @@ export const Buttons = () => {
         </CodeBox>
         <CodeBox>
           <Items>
-            <Button color="default" disableShadow />
-            <Button startIcon={<BedtimeIcon fontSize="small" />} />
-            <Button endIcon={<BedtimeIcon fontSize="small" />} />
+            <Button color="default" disableShadow>
+              Default
+            </Button>
           </Items>
           <Item title="Shadow">
             To disable box shadow set <Text code>disableShadow</Text> property
