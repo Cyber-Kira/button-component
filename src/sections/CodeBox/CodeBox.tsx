@@ -31,12 +31,49 @@ export const CodeBox = ({ children }: Props) => {
 const Toggle = () => {
   const { open, toggle } = useContext(HightlightContext);
 
-  const buttonText = open ? "Hide Code" : "Show Code";
+  const buttonIcon = open ? (
+    <CodeOffIcon fontSize="small" />
+  ) : (
+    <CodeIcon fontSize="small" />
+  );
 
   return (
-    <button className="btn btn_sm btn_outline" onClick={() => toggle(!open)}>
-      {buttonText}
-    </button>
+    <Button
+      size="sm"
+      variant="outline"
+      shape="circle"
+      tooltip="Show code"
+      handleClick={() => toggle(!open)}
+    >
+      {buttonIcon}
+    </Button>
+  );
+};
+
+const CopyToClipboard = ({ textToCopy }: { textToCopy: string }) => {
+  const [tooltipText, setTooltipText] = useState("Copy code");
+  const [currentIcon, setCurrentIcon] = useState<React.ReactNode>(
+    <ContentCopyIcon fontSize="small" />
+  );
+
+  return (
+    <Button
+      size="sm"
+      variant="outline"
+      shape="circle"
+      tooltip={tooltipText}
+      handleClick={() => {
+        setTooltipText("Copied!");
+        navigator.clipboard.writeText(textToCopy);
+        setCurrentIcon(<CheckIcon fontSize="small" />);
+        setTimeout(() => {
+          setTooltipText("Copy code");
+          setCurrentIcon(<ContentCopyIcon fontSize="small" />);
+        }, 2500);
+      }}
+    >
+      {currentIcon}
+    </Button>
   );
 };
 
