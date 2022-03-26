@@ -141,15 +141,29 @@ export const Buttons = () => {
           </Item>
           <Item code>{buttonsIconCodeSample}</Item>
         </CodeBox>
+        <CodeBox>
+          <Items>
+            <Button
+              startIcon={<BedtimeIcon fontSize="small" />}
+              handleClick={() => setTheme("dark")}
+              tooltip="Long tooltip that will change theme"
+            ></Button>
+            <Button
+              shape="circle"
+              startIcon={<LightModeIcon fontSize="small" />}
+              tooltip="Light mode"
+              handleClick={() => setTheme("light")}
+            />
           </Items>
-          <Item title="Shadow">
-            To disable box shadow set <Text code>disableShadow</Text> property
-            to <Text code>Button</Text>.
+          <Item title="Tooltip">
+            To add tip to <Text code>Button</Text> set <Text code>tooltip</Text>{" "}
+            property to some text.
           </Item>
           <Item buttons>
             <Toggle />
+            <CopyToClipboard textToCopy={buttonsTooltipCodeSample} />
           </Item>
-          <Item code>{shadowButtonCodeSample}</Item>
+          <Item code>{buttonsTooltipCodeSample}</Item>
         </CodeBox>
       </div>
     </>
