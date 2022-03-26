@@ -8,6 +8,8 @@ export const Button = ({
   size,
   disabled,
   disableShadow,
+  startIcon,
+  endIcon,
 }: Props) => {
   const isColored = color && !variant && !disabled;
 
@@ -22,5 +24,11 @@ export const Button = ({
     .replace(/\s+/g, " ")
     .trim();
 
-  return <button className={styles}>{text}</button>;
+  return (
+    <button className={styles}>
+      {startIcon}
+      {text}
+      {endIcon}
+    </button>
+  );
 };
