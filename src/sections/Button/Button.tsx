@@ -2,7 +2,7 @@ import React from "react";
 import { Props } from "./types";
 
 export const Button = ({
-  text = "Default",
+  children,
   variant,
   color = "default",
   size,
@@ -12,6 +12,7 @@ export const Button = ({
   endIcon,
   shape,
   tooltip,
+  handleClick,
 }: Props) => {
   const isColored = color && !variant && !disabled;
 
@@ -32,9 +33,10 @@ export const Button = ({
     .trim();
 
   return (
+    <button className={styles} onClick={handleClick}>
       {tooltipElement}
       {startIcon}
-      {text}
+      {children}
       {endIcon}
     </button>
   );
