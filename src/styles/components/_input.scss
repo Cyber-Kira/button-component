@@ -1,0 +1,36 @@
+.input {
+  color: #333333;
+  display: block;
+  padding: 18px 12px;
+  margin: 4px 0;
+  border: 1px solid #828282;
+  border-radius: 8px;
+  max-width: 200px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  &::placeholder {
+    color: #828282;
+  }
+
+  &:hover {
+    border-color: #333333;
+  }
+
+  &:focus,
+  &:focus label {
+    outline: none;
+    color: #2962ff;
+    border-color: #2962ff;
+  }
+
+  &_error {
+  }
+  &_disabled {
+  }
+  &_multiline {
+  }
+  &_md {
+  }
+  &_sm {
+  }
+}
