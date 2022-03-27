@@ -15,6 +15,7 @@ import {
 } from "react-router-dom";
 import "./styles/main.scss";
 import { Buttons } from "./sections/Buttons";
+import { Inputs } from "./sections/Inputs/Inputs";
 
 type ContextType = {
   setTheme: React.Dispatch<React.SetStateAction<Themes>>;
@@ -88,7 +89,7 @@ ReactDOM.render(
           <Route path="/" element={<App />}>
             <Route path="/" element={<Buttons />} />
             <Route path="/buttons" element={<Buttons />} />
-            <Route path="/inputs" element={<Buttons />} />
+            <Route path="/inputs" element={<Inputs />} />
           </Route>
         </Routes>
       </Router>
