@@ -1,14 +1,15 @@
 .input {
   color: #333333;
   display: block;
-  padding: 18px 12px;
-  margin: 4px 0;
   border: 1px solid #828282;
   border-radius: 8px;
   max-width: 200px;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
   &::placeholder {
+    font-family: "Noto Sans JP";
+    @include font(14px, 20px);
+
     color: #828282;
   }
 
@@ -16,21 +17,114 @@
     border-color: #333333;
   }
 
-  &:focus,
-  &:focus label {
+  &:focus {
     outline: none;
-    color: #2962ff;
     border-color: #2962ff;
+    transition: border-color 0.2s;
   }
 
   &_error {
+    border-color: #d32f2f;
+
+    ~ .input__helper-text {
+      color: #d32f2f;
+    }
+
+    &:focus {
+      border-color: #d32f2f;
+    }
+
+    &:hover ~ .input__helper-text {
+      color: #333333;
+      transition: color 0.2s;
+    }
+
+    &:focus ~ .input__helper-text {
+      color: #d32f2f;
+      transition: color 0.2s;
+    }
   }
   &_disabled {
+    background-color: #f2f2f2;
+    border-color: #e0e0e0;
+    cursor: not-allowed;
+
+    &:hover {
+      border-color: #e0e0e0;
+    }
   }
   &_multiline {
+    overflow: auto;
+    resize: vertical;
+    transition: none;
+  }
+  &_full-width {
+    width: 100%;
+    max-width: 100%;
+  }
+  &__helper-text {
+    font-family: "Noto Sans JP";
+    @include font(10px, 14px, 400);
+
+    color: #828282;
   }
   &_md {
+    padding: 18px 12px;
   }
   &_sm {
+    padding: 10px 12px;
   }
+}
+
+// TODO: This section needs to be improved.
+
+.input + .input-label {
+  color: #333333;
+  transition: color 0.2s;
+}
+
+.input:focus + .input-label {
+  color: #2962ff;
+}
+
+.input.input_error + .input-label {
+  color: #d32f2f;
+}
+
+.input.input_error:hover + .input-label {
+  color: #333333;
+}
+
+.input.input_error:focus + .input-label {
+  color: #d32f2f;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.input-label {
+  font-family: "Noto Sans JP";
+  @include font(12px, 17px, 400);
+  order: 0;
+}
+
+.input {
+  order: 1;
+}
+
+.input__helper-text {
+  order: 3;
+}
+
+// ICONS
+
+.icons-container {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
 }
