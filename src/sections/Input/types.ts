@@ -10,6 +10,7 @@ export interface Props {
   rows?: string;
   placeholder?: string;
   label?: string;
+  multiline?: boolean;
   startIcon?: React.ReactNode;
   endIcon?: React.ReactNode;
   size?: sizes;
