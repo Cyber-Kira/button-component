@@ -26,9 +26,7 @@ export const Input = ({
   ${error ? "input_error" : ""}
   ${disabled && !error ? "input_disabled" : ""}
   ${size ? `input_${size}` : ""}
-  ${multiline ? `input_multiline` : ""}
-  
-  `
+  ${multiline ? `input_multiline` : ""}`
     .replace(/\s+/g, " ")
     .trim();
 
