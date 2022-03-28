@@ -45,12 +45,12 @@ export const Input = ({
   );
 
   return (
-    <label className="input-label">
-      {startIcon}
-      {label}
+    <div className="input-wrapper">
       {multiline ? textareaElement : inputElement}
-      {helperText}
-      {endIcon}
-    </label>
+      <label className="input-label">{label}</label>
+      {helperTextElement}
+      {startIconElement}
+      {endIconElement}
+    </div>
   );
 };
