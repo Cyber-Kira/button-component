@@ -6,8 +6,7 @@ export interface Props {
   fullWidth?: boolean;
   helperText?: string;
   value?: string;
-  multiline?: string;
-  rows?: string;
+  row?: string;
   placeholder?: string;
   label?: string;
   multiline?: boolean;
