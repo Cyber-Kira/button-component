@@ -27,6 +27,18 @@ export const Input = ({
     .replace(/\s+/g, " ")
     .trim();
 
+  const startIconElement = (
+    <div className="input-icon input-icon_start">{startIcon}</div>
+  );
+
+  const endIconElement = (
+    <div className="input-icon input-icon_end">{endIcon}</div>
+  );
+
+  const helperTextElement = (
+    <span className="input__helper-text">{helperText}</span>
+  );
+
   const inputElement = (
     <input
       className={styles}
