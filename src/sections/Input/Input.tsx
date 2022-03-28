@@ -10,7 +10,7 @@ export const Input = ({
   value,
   placeholder,
   multiline,
-  rows,
+  row = "3",
   startIcon,
   endIcon,
   size = "md",
