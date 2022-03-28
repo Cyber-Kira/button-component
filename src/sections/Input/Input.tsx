@@ -1,3 +1,8 @@
+// The label inside the input component is unnecessary and
+// should be removed when I create a Form component that has
+// a labeled element. But for the sake of simplicity and the
+// given design I won't remove it yet.
+
 import React from "react";
 import { Props } from "./types";
 
