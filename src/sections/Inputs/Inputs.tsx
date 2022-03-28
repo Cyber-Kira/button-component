@@ -2,6 +2,9 @@ import React from "react";
 import { CodeBox } from "../CodeBox";
 import { Input } from "../Input";
 import { Typography } from "../Typography";
+import KeyIcon from "@mui/icons-material/Key";
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
 export const Inputs = () => {
   const { Item, Items, Toggle, CopyToClipboard } = CodeBox;
