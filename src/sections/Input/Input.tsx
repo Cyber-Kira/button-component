@@ -33,7 +33,8 @@ export const Input = ({
       placeholder={placeholder}
       value={value}
       type="text"
-    ></input>
+      disabled={disabled}
+    />
   );
 
   const textareaElement = (
@@ -41,6 +42,8 @@ export const Input = ({
       className={styles}
       placeholder={placeholder}
       value={value}
+      rows={+row < 6 ? +row : 6}
+      disabled={disabled}
     ></textarea>
   );
 
