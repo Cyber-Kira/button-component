@@ -21,7 +21,11 @@ export const Inputs = () => {
       <div className="content">
         <CodeBox>
           <Items>
-            <Input placeholder="Basic usage" label="Label" />
+            <Input
+              placeholder="Basic usage"
+              label="Label"
+              helperText="LabelHelper"
+            />
           </Items>
           <Item title="Basic usage">Basic usage example.</Item>
           <Item buttons>
