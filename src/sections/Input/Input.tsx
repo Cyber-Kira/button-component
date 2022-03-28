@@ -9,7 +9,7 @@ import { Props } from "./types";
 export const Input = ({
   error,
   disabled,
-  fullWidth = true,
+  fullWidth = false,
   label,
   helperText,
   value,
