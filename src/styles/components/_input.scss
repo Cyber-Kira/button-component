@@ -74,29 +74,24 @@
   &_sm {
     padding: 10px 12px;
   }
-}
-
-// TODO: This section needs to be improved.
-
-.input + .input-label {
-  color: #333333;
-  transition: color 0.2s;
-}
-
-.input:focus + .input-label {
-  color: #2962ff;
-}
-
-.input.input_error + .input-label {
-  color: #d32f2f;
-}
-
-.input.input_error:hover + .input-label {
-  color: #333333;
-}
-
-.input.input_error:focus + .input-label {
-  color: #d32f2f;
+  &_md.input_with-icon_both {
+    padding: 18px 42px;
+  }
+  &_md.input_with-icon_start {
+    padding: 18px 12px 18px 42px;
+  }
+  &_md.input_with-icon_end {
+    padding: 18px 42px 18px 12px;
+  }
+  &_sm.input_with-icon_both {
+    padding: 10px 42px;
+  }
+  &_sm.input_with-icon_start {
+    padding: 10px 12px 10px 42px;
+  }
+  &_sm.input_with-icon_end {
+    padding: 10px 42px 10px 12px;
+  }
 }
 
 .input-wrapper {
@@ -105,26 +100,99 @@
   gap: 4px;
 }
 
+.input_focused {
+  border-color: #2962ff;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.input_focused-error {
+  border-color: #d32f2f;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
 .input-label {
   font-family: "Noto Sans JP";
   @include font(12px, 17px, 400);
   order: 0;
+  &_focused {
+    color: #2962ff;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  &_focused-error {
+    color: #d32f2f;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  &_error-hover {
+    color: #333333;
+  }
+  &_error {
+    color: #d32f2f;
+  }
 }
 
-.input {
+.icons-container {
   order: 1;
 }
 
 .input__helper-text {
   order: 3;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  &_error {
+    color: #d32f2f;
+  }
+  &_error-hover {
+    color: #828282;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  &_error-focus {
+    color: #d32f2f;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
 }
 
 // ICONS
 
 .icons-container {
   position: relative;
+  width: fit-content;
+  &_full-width {
+    width: 100%;
+  }
 }
 
 .input-icon {
   position: absolute;
+  top: calc(50% - 10px);
+
+  svg {
+    max-width: 20px;
+    max-height: 20px;
+    fill: #828282;
+  }
+
+  &_start {
+    left: 12px;
+  }
+
+  &_end {
+    right: 12px;
+  }
+  &_password {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background-color: transparent;
+    svg {
+      fill: #828282;
+    }
+    cursor: pointer;
+  }
 }
