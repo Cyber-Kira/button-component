@@ -5,7 +5,6 @@ import { ThemeContext, Themes, themes } from "./lib/components/Theme";
 import { AppHeader } from "./sections/AppHeader";
 import { Menu } from "./sections/Menu";
 import { ItemGroup } from "./sections/Menu/components/ItemGroup";
-import { DataItem } from "./sections/Menu/types";
 import {
   BrowserRouter as Router,
   Routes,
@@ -16,6 +15,9 @@ import {
 import "./styles/main.scss";
 import { Buttons } from "./sections/Buttons";
 import { Inputs } from "./sections/Inputs/Inputs";
+import { Footer } from "./sections/Footer";
+import { Drawer } from "./sections/Drawer";
+import { data } from "./data";
 
 type ContextType = {
   setTheme: React.Dispatch<React.SetStateAction<Themes>>;
@@ -29,38 +31,11 @@ const App = () => {
     setTheme(currentTheme);
   };
 
-  // TODO: separate data
-  const data: DataItem[] = [
-    {
-      title: "Colors",
-      link: "#",
-    },
-    {
-      title: "Typography",
-      link: "#",
-    },
-    {
-      title: "Spaces",
-      link: "#",
-    },
-    {
-      title: "Buttons",
-      link: "/buttons",
-    },
-    {
-      title: "Inputs",
-      link: "/inputs",
-    },
-    {
-      title: "Grid",
-      link: "#",
-    },
-  ];
-
   return (
     <ThemeContext.Provider value={theme}>
       <Affix offsetTop="0">
         <AppHeader changeTheme={toggleTheme} />
+        <Drawer />
       </Affix>
       <div className="row content-row">
         <div className="menu-wrapper d-none-laptop b-color">
@@ -71,6 +46,7 @@ const App = () => {
         <div className="col menu-col d-none-laptop"></div>
         <div className="content-wrapper col col-md-10 col-sm-12">
           <Outlet context={{ setTheme }} />
+          <Footer />
         </div>
       </div>
     </ThemeContext.Provider>
