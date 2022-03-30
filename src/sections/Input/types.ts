@@ -13,4 +13,5 @@ export interface Props {
   startIcon?: React.ReactNode;
   endIcon?: React.ReactNode;
   size?: sizes;
+  password?: boolean;
 }
