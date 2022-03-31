@@ -13,12 +13,16 @@ export const AppHeader = ({ changeTheme }: { changeTheme: () => void }) => {
   const currentTheme = useContext(ThemeContext);
   const themeChangerIcon = currentTheme === "light" ? LightIcon : DarkIcon;
   const githubIcon = currentTheme === "light" ? GitHubDark : GitHubLight;
+  const toggleOpen = () => {
+    document.body.classList.toggle("noscroll");
+    setOpen(!isOpen);
+  };
 
   return (
     <header className="header wrapper-xl row">
       <Hamburger
         toggled={isOpen}
-        toggle={setOpen}
+        toggle={toggleOpen}
         size={28}
         color={"hsla(0, 0%, 10%, 1)"}
       />

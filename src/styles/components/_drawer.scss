@@ -36,6 +36,7 @@
   transform: none;
   transition: all 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
   box-shadow: 2px 0 8px #00000026;
+  overflow: auto;
 }
 
 .drawer-open {
