@@ -7,7 +7,6 @@ export const Drawer = () => {
   const [isOpen, setOpen] = useState(false);
   return (
     <>
-      <div className="drawer-mask"></div>
       <div className={`drawer ${isOpen ? "drawer-open" : ""}`}>
         <Hamburger
           toggled={isOpen}
@@ -16,6 +15,7 @@ export const Drawer = () => {
           color={"hsla(0, 0%, 10%, 1)"}
         />
       </div>
+      <div className="drawer-mask"></div>
       <div className={`drawer-content ${isOpen ? "drawer-content-open" : ""}`}>
         <ItemGroup header={"General"} items={data} />
       </div>
