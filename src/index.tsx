@@ -24,7 +24,17 @@ type ContextType = {
 };
 
 const App = () => {
-  const [theme, setTheme] = useState<Themes>(themes.light);
+  const [theme, setTheme] = useState<Themes>("light");
+
+  useEffect(() => {
+    const localTheme = localStorage.getItem("data-theme");
+    if (localTheme === "dark") {
+      setTheme("dark");
+    }
+    if (localTheme === "light") {
+      setTheme("light");
+    }
+  }, []);
 
   const toggleTheme = () => {
     const currentTheme = theme === themes.light ? themes.dark : themes.light;
