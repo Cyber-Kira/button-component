@@ -38,7 +38,7 @@ const App = () => {
 
   const toggleTheme = (value?: Themes) => {
     let currentTheme = theme === themes.light ? themes.dark : themes.light;
-    if (value) {
+    if (value && value.length > 0) {
       currentTheme = value;
     }
 
