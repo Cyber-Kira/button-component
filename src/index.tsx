@@ -51,7 +51,7 @@ const App = () => {
     <ThemeContext.Provider value={theme}>
       <Affix offsetTop="0">
         <AppHeader changeTheme={toggleTheme} />
-        <div className={`row content-row theme-${theme}`}>
+        <div className={`drawer-wrapper theme-${theme}`}>
           <Drawer />
         </div>
       </Affix>

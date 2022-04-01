@@ -3,6 +3,17 @@ import { CodeBox } from "../CodeBox";
 import { Input } from "../Input";
 import { Typography } from "../Typography";
 import KeyIcon from "@mui/icons-material/Key";
+import {
+  disabledInputCodeSample,
+  errorInputCodeSample,
+  fixedWidthInputCodeSample,
+  iconsInputCodeSample,
+  mainInputCodeSample,
+  multiLineInputCodeSample,
+  passwordInputCodeSample,
+  sizesInputCodeSample,
+  valueInputCodeSample,
+} from "./data";
 
 export const Inputs = () => {
   const { Item, Items, Toggle, CopyToClipboard } = CodeBox;
@@ -29,21 +40,21 @@ export const Inputs = () => {
           <Item title="Basic usage">Basic usage example.</Item>
           <Item buttons>
             <Toggle />
-            <CopyToClipboard textToCopy={"text"} />
+            <CopyToClipboard textToCopy={mainInputCodeSample} />
           </Item>
-          <Item code>{"text"}</Item>
+          <Item code>{mainInputCodeSample}</Item>
         </CodeBox>
         <CodeBox>
           <Items>
             <Input placeholder="Input with fixed width" label="Label" />
             <Input size="sm" startIcon={<KeyIcon />} />
           </Items>
-          <Item title="Fixed width">Basic usage example.</Item>
+          <Item title="Fixed width">Fixed width.</Item>
           <Item buttons>
             <Toggle />
-            <CopyToClipboard textToCopy={"text"} />
+            <CopyToClipboard textToCopy={fixedWidthInputCodeSample} />
           </Item>
-          <Item code>{"text"}</Item>
+          <Item code>{fixedWidthInputCodeSample}</Item>
         </CodeBox>
         <CodeBox>
           <Items>
@@ -58,9 +69,9 @@ export const Inputs = () => {
           <Item title="Error">Error state of input.</Item>
           <Item buttons>
             <Toggle />
-            <CopyToClipboard textToCopy={"text"} />
+            <CopyToClipboard textToCopy={errorInputCodeSample} />
           </Item>
-          <Item code>{"text"}</Item>
+          <Item code>{errorInputCodeSample}</Item>
         </CodeBox>
         <CodeBox>
           <Items>
@@ -73,13 +84,13 @@ export const Inputs = () => {
             <Input placeholder="Small size" label="Label" fullWidth size="sm" />
           </Items>
           <Item title="Sizes">
-            There are three sizes of an Input box: md (56px), sm (40px).
+            There are two sizes of an Input box: md (56px), sm (40px).
           </Item>
           <Item buttons>
             <Toggle />
-            <CopyToClipboard textToCopy={"text"} />
+            <CopyToClipboard textToCopy={sizesInputCodeSample} />
           </Item>
-          <Item code>{"text"}</Item>
+          <Item code>{sizesInputCodeSample}</Item>
         </CodeBox>
         <CodeBox>
           <Items>
@@ -95,9 +106,9 @@ export const Inputs = () => {
           <Item title="TextArea">For multi-line input.</Item>
           <Item buttons>
             <Toggle />
-            <CopyToClipboard textToCopy={"text"} />
+            <CopyToClipboard textToCopy={multiLineInputCodeSample} />
           </Item>
-          <Item code>{"text"}</Item>
+          <Item code>{multiLineInputCodeSample}</Item>
         </CodeBox>
         <CodeBox>
           <Items>
@@ -111,9 +122,9 @@ export const Inputs = () => {
           <Item title="Password">Input type of password.</Item>
           <Item buttons>
             <Toggle />
-            <CopyToClipboard textToCopy={"text"} />
+            <CopyToClipboard textToCopy={passwordInputCodeSample} />
           </Item>
-          <Item code>{"text"}</Item>
+          <Item code>{passwordInputCodeSample}</Item>
         </CodeBox>
         <CodeBox>
           <Items>
@@ -133,9 +144,9 @@ export const Inputs = () => {
           <Item title="Icons">Input type with icons.</Item>
           <Item buttons>
             <Toggle />
-            <CopyToClipboard textToCopy={"text"} />
+            <CopyToClipboard textToCopy={iconsInputCodeSample} />
           </Item>
-          <Item code>{"text"}</Item>
+          <Item code>{iconsInputCodeSample}</Item>
         </CodeBox>
         <CodeBox>
           <Items>
@@ -160,9 +171,9 @@ export const Inputs = () => {
           </Item>
           <Item buttons>
             <Toggle />
-            <CopyToClipboard textToCopy={"text"} />
+            <CopyToClipboard textToCopy={valueInputCodeSample} />
           </Item>
-          <Item code>{"text"}</Item>
+          <Item code>{valueInputCodeSample}</Item>
         </CodeBox>
         <CodeBox>
           <Items>
@@ -176,9 +187,9 @@ export const Inputs = () => {
           <Item title="Disabled">Disabled input.</Item>
           <Item buttons>
             <Toggle />
-            <CopyToClipboard textToCopy={"text"} />
+            <CopyToClipboard textToCopy={disabledInputCodeSample} />
           </Item>
-          <Item code>{"text"}</Item>
+          <Item code>{disabledInputCodeSample}</Item>
         </CodeBox>
       </div>
     </>

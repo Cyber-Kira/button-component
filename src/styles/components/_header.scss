@@ -16,7 +16,6 @@
     background-color: #fafbfd;
     min-height: 100%;
     opacity: 0;
-    z-index: 1;
     gap: 15px;
 
     transition: opacity 0.3s ease;
@@ -27,7 +26,6 @@
       justify-content: flex-end;
       transform: translateY(0);
       opacity: 1;
-      z-index: 2;
       gap: 20px;
     }
   }

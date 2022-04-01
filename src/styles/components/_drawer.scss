@@ -1,3 +1,9 @@
+.drawer-wrapper {
+  z-index: 100;
+  width: 1px;
+  height: 1px;
+}
+
 .drawer {
   position: fixed;
   top: 80px;
@@ -7,6 +13,7 @@
   box-shadow: 5px 0px 6px 1px rgba(34, 60, 80, 0.12);
   border-radius: 0 4px 4px 0;
   transition: all 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+  z-index: -1;
 
   @include media-laptop {
     display: none;
@@ -37,11 +44,13 @@
   transition: all 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
   box-shadow: 2px 0 8px #00000026;
   overflow: auto;
+  z-index: 99;
 }
 
 .drawer-open {
   transform: translateX(calc(130px + 100%));
   transition: all 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+  z-index: 0;
 }
 
 .drawer-mask {
@@ -53,7 +62,6 @@
   left: 0;
   background: #000;
   opacity: 0;
-  z-index: -1;
   transition: opacity 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86),
     height 0s ease 0.3s;
 }
@@ -62,4 +70,5 @@
   display: block;
   opacity: 0.3;
   transition: opacity 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+  z-index: -1;
 }
