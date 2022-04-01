@@ -18,6 +18,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body.theme-dark {
+  background-color: #181a1b;
+}
+
 a {
   text-decoration: none;
   color: inherit;

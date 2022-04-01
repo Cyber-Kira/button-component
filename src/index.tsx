@@ -39,6 +39,11 @@ const App = () => {
   const toggleTheme = () => {
     const currentTheme = theme === themes.light ? themes.dark : themes.light;
     localStorage.setItem("data-theme", currentTheme);
+    if (currentTheme === "dark") {
+      document.body.classList.add("theme-dark");
+    } else {
+      document.body.classList.remove("theme-dark");
+    }
     setTheme(currentTheme);
   };
 
