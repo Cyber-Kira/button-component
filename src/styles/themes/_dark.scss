@@ -93,4 +93,19 @@
       background-color: #444444;
     }
   }
+  .drawer-content-open {
+    box-shadow: rgb(0 0 0 / 15%) 2px 0px 8px;
+    background-color: rgb(24, 26, 27);
+    color: #d9d9d9;
+    .menu__header {
+      color: #808080;
+    }
+  }
+  .drawer-mask {
+    background: rgb(24, 26, 27);
+  }
+  .drawer {
+    background-color: #444444;
+  }
+  background-color: #181a1b;
 }

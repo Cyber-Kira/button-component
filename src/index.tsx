@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import { Affix } from "./lib/components";
 import { ThemeContext, Themes, themes } from "./lib/components/Theme";
@@ -20,7 +20,7 @@ import { Drawer } from "./sections/Drawer";
 import { data } from "./data";
 
 type ContextType = {
-  setTheme: React.Dispatch<React.SetStateAction<Themes>>;
+  toggleTheme: (value: React.SetStateAction<Themes>) => void;
 };
 
 const App = () => {
@@ -38,6 +38,7 @@ const App = () => {
 
   const toggleTheme = () => {
     const currentTheme = theme === themes.light ? themes.dark : themes.light;
+    localStorage.setItem("data-theme", currentTheme);
     setTheme(currentTheme);
   };
 
@@ -45,7 +46,9 @@ const App = () => {
     <ThemeContext.Provider value={theme}>
       <Affix offsetTop="0">
         <AppHeader changeTheme={toggleTheme} />
-        <Drawer />
+        <div className={`row content-row theme-${theme}`}>
+          <Drawer />
+        </div>
       </Affix>
       <div className={`row content-row theme-${theme}`}>
         <div className="menu-wrapper d-none-laptop b-color">
@@ -55,7 +58,7 @@ const App = () => {
         </div>
         <div className="col menu-col d-none-laptop"></div>
         <div className="content-wrapper col col-md-10 col-sm-12">
-          <Outlet context={{ setTheme }} />
+          <Outlet context={{ toggleTheme }} />
           <Footer />
         </div>
       </div>

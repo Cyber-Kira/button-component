@@ -18,7 +18,7 @@ import { useTheme } from "../..";
 export const Buttons = () => {
   const { Item, Items, Toggle, CopyToClipboard } = CodeBox;
   const { Header, Paragraph, Text } = Typography;
-  const { setTheme } = useTheme();
+  const { toggleTheme } = useTheme();
 
   return (
     <>
@@ -120,26 +120,26 @@ export const Buttons = () => {
           <Items>
             <Button
               startIcon={<BedtimeIcon fontSize="small" />}
-              handleClick={() => setTheme("dark")}
+              handleClick={() => toggleTheme("dark")}
             >
               Dark mode
             </Button>
             <Button
               endIcon={<LightModeIcon fontSize="small" />}
-              handleClick={() => setTheme("light")}
+              handleClick={() => toggleTheme("light")}
             >
               Light mode
             </Button>
             <Button
               startIcon={<BedtimeIcon fontSize="small" />}
               tooltip="Dark mode"
-              handleClick={() => setTheme("dark")}
+              handleClick={() => toggleTheme("dark")}
             />
             <Button
               shape="circle"
               startIcon={<LightModeIcon fontSize="small" />}
               tooltip="Light mode"
-              handleClick={() => setTheme("light")}
+              handleClick={() => toggleTheme("light")}
             />
           </Items>
           <Item title="Icon">
@@ -156,14 +156,14 @@ export const Buttons = () => {
           <Items>
             <Button
               startIcon={<BedtimeIcon fontSize="small" />}
-              handleClick={() => setTheme("dark")}
+              handleClick={() => toggleTheme("dark")}
               tooltip="Long tooltip that will change theme"
             ></Button>
             <Button
               shape="circle"
               startIcon={<LightModeIcon fontSize="small" />}
               tooltip="Light mode"
-              handleClick={() => setTheme("light")}
+              handleClick={() => toggleTheme("light")}
             />
           </Items>
           <Item title="Tooltip">
