@@ -1,0 +1,96 @@
+.theme-dark {
+  // > * {
+  //   background-color: rgb(26, 28, 29);
+  //   color: #d9d9d9;
+  // }
+  .header__navigation {
+    background-color: rgb(26, 28, 29);
+    color: #d9d9d9;
+  }
+  .header {
+    box-shadow: rgb(32 35 36) 0px 2px 8px;
+  }
+  .header__logo {
+    background-color: rgb(26, 28, 29);
+    color: #d9d9d9;
+  }
+  .theme-changer {
+    background-color: rgb(36, 39, 41);
+    span {
+      color: rgba(223, 220, 215, 0.7);
+    }
+  }
+  .navigation-menu a {
+    border-bottom-color: rgba(120, 112, 99, 0.12);
+  }
+  .hamburger-react {
+    div {
+      background: white !important;
+    }
+  }
+  .menu-wrapper {
+    background-color: rgb(26, 28, 29);
+    .menu {
+      color: rgb(172, 165, 154);
+      &__header {
+        color: #afafaf;
+      }
+    }
+  }
+  .menu__link:hover {
+    outline: none;
+    color: #2339b4;
+  }
+  .content-wrapper {
+    background-color: #181a1b;
+  }
+  .typography__title_h1,
+  .typography__title_h2 {
+    color: #e8e6e3;
+  }
+  .typography__paragraph {
+    color: rgb(208, 204, 198);
+  }
+
+  .code-box {
+    color: #e8e6e3;
+    .typography__text_code {
+      background-color: rgb(46, 66, 77);
+      border-color: rgba(255, 255, 255, 0.06);
+    }
+    code pre {
+      background: rgb(46, 66, 77);
+    }
+    &__title {
+      background-color: transparent;
+    }
+    background-color: rgba(140, 130, 115, 0.06);
+    &__items {
+      border-bottom-color: rgba(140, 130, 115, 0.06);
+    }
+    .btn {
+      color: rgb(192, 187, 179);
+      background-color: rgb(42, 45, 47);
+      box-shadow: rgb(38 42 43 / 20%) 0px 2px 3px;
+    }
+    .btn:hover {
+      background-color: rgb(70, 76, 78);
+      background-image: initial;
+    }
+    .btn_outline:hover {
+      background-color: rgba(0, 48, 179, 0.1);
+    }
+    .btn_text {
+      color: rgb(69, 147, 254);
+      border-color: initial;
+      background-color: transparent;
+    }
+    .input {
+      color: rgb(200, 195, 188);
+      background-color: #181a1b;
+    }
+    .input_disabled {
+      background-color: #444444;
+    }
+  }
+}

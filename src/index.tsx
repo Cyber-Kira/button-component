@@ -37,7 +37,7 @@ const App = () => {
         <AppHeader changeTheme={toggleTheme} />
         <Drawer />
       </Affix>
-      <div className="row content-row">
+      <div className={`row content-row theme-${theme}`}>
         <div className="menu-wrapper d-none-laptop b-color">
           <Menu>
             <ItemGroup header={"General"} items={data} />
