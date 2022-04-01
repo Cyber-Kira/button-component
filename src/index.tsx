@@ -36,8 +36,12 @@ const App = () => {
     }
   }, []);
 
-  const toggleTheme = () => {
-    const currentTheme = theme === themes.light ? themes.dark : themes.light;
+  const toggleTheme = (value?: Themes) => {
+    let currentTheme = theme === themes.light ? themes.dark : themes.light;
+    if (value) {
+      currentTheme = value;
+    }
+
     localStorage.setItem("data-theme", currentTheme);
     if (currentTheme === "dark") {
       document.body.classList.add("theme-dark");
